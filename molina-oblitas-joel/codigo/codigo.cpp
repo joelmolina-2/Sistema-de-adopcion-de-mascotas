@@ -1,3 +1,5 @@
+//Registro para mascotas nuevas
+
 #include <iostream>
 #include <vector>
 #include <limits>
@@ -26,7 +28,7 @@ int main() {
     //Para que consuma el salto de linea y no utilice el bucle
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
     
-    //Vector para almacenar el registro
+    
     vector<registro> Almacenar_registro ={};
     
     //Bucle para los registros
@@ -35,7 +37,7 @@ int main() {
         //Nueva instancia para nuevos registros
         registro registro_g;
         
-        //Para guardar en la variable dentro de la struct y que luego se almacene en el vector
+        //El usuario rellena segun lo que pide y se almacena en la struct
         cout <<"Nombre de la mascota "<<cantidad + 1<<endl;
         getline(cin, registro_g.nombre);
         
@@ -58,7 +60,7 @@ int main() {
         //Para que consuma el salto de linea y no utilice el bucle
         cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
         
-        //Almacenar la struct de registro_g al vector
+        //Almacenar el registro
         Almacenar_registro.push_back(registro_g);
     
         cantidad++;
